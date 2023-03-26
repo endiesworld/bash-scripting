@@ -1,9 +1,9 @@
 #!/bin/bash
 
-dir1="$1"
-dir2="$2"
+# dir1="$1"
+# dir2="$2"
 
-# # Check files in dir1 but not in dir2
+# # # Check files in dir1 but not in dir2
 # for file in "$dir1"/*; do
 #     filename=$(basename "$file")
 #     if [ ! -e "$dir2/$filename" ]; then
@@ -18,6 +18,19 @@ dir2="$2"
 #         echo "$filename is present in $dir2 but not in $dir1"
 #     fi
 # done
+
+# for file in "$dir1"/*; do: This loop iterates over each file in $dir1 and stores each file's path in the variable file.
+# filename=$(basename "$file"): This command sets the variable filename to the base name of file. 
+# The basename command removes the path leading up to the file name.
+# if [ ! -e "$dir2/$filename" ]; then: This conditional statement checks if the file in $dir1 is not present in $dir2. 
+# The -e option tests if a file exists, and the ! negates the result.
+# echo "$filename is present in $dir1 but not in $dir2": This command prints a message to the terminal if the file is not present in $dir2. 
+# The message informs the user that the file is present in $dir1 but not in $dir2.
+# To summarize, this script loops through all files in $dir1, gets their file names, 
+# and checks if each file exists in $dir2. If a file in $dir1 is not present in $dir2, 
+# the script prints a message indicating that the file is present in $dir1 but not in $dir2.
+
+
 
 
 cd dir1
